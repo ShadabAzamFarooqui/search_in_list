@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 MyAdapter.mFilteredList=detailList;
                 MyAdapter.detailList=detailList;
-                myAdapter.notifyDataSetChanged();
+//                myAdapter.notifyDataSetChanged();
                 myAdapter.getFilter().filter(s.toString());
             }
         });
