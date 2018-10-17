@@ -19,9 +19,9 @@ import java.util.Map;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> implements Filterable {
 
 
-    List<Detail> detailList;
+    public static List<Detail> detailList;
     Context context;
-    List<Detail> mFilteredList;
+    public static List<Detail> mFilteredList;
 
     public MyAdapter(Context context, List detailList) {
         this.context = context;

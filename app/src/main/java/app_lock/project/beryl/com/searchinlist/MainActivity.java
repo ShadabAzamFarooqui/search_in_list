@@ -53,8 +53,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                myAdapter = new MyAdapter(getApplicationContext(), detailList);
-                mRecyclerView.setAdapter(myAdapter);
+                MyAdapter.mFilteredList=detailList;
+                MyAdapter.detailList=detailList;
+                myAdapter.notifyDataSetChanged();
                 myAdapter.getFilter().filter(s.toString());
             }
         });
